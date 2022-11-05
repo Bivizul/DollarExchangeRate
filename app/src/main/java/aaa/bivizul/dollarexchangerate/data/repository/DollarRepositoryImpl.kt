@@ -4,15 +4,21 @@ import aaa.bivizul.dollarexchangerate.data.network.DollarApiService
 import aaa.bivizul.dollarexchangerate.domain.repository.DollarRepository
 import javax.inject.Inject
 
-class DollarRepositoryImpl @Inject constructor(val dollarApiService: DollarApiService) : DollarRepository {
+class DollarRepositoryImpl @Inject constructor(val dollarApiService: DollarApiService) :
+    DollarRepository {
 
-    override fun getDollarInfo() {
+    override suspend fun getDollarInfo() {
         TODO("Not yet implemented")
     }
 
-    override fun getDollarInfoList() = dollarApiService.getDollarInfoList()
+    override suspend fun getDollarInfoList(date1: String, date2: String, id: String) =
+        dollarApiService.getDollarInfoList(
+            date1 = date1,
+            date2 = date2,
+            id = id
+        )
 
-    override fun loadData() {
+    override suspend fun loadData() {
         TODO("Not yet implemented")
     }
 }

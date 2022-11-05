@@ -1,14 +1,15 @@
 package aaa.bivizul.dollarexchangerate.domain.model
 
-import androidx.annotation.Keep
-import com.google.gson.annotations.SerializedName
+import org.simpleframework.xml.Element
+import org.simpleframework.xml.Root
 
-@Keep
+//@Keep
+@Root
 data class DollarInfo(
 
-    @SerializedName("Id") val id: String,
-    @SerializedName("Date") val date: String,
-    @SerializedName("Nominal") val nominal: Int,
-    @SerializedName("Value") val value: Double,
+    @field : Element(name = "Id") val id: String,
+    @field : Element(name = "Date") val date: String,
+    @field : Element(name = "Nominal") val nominal: Int,
+    @field : Element(name = "Value") val value: Double,
 
-)
+    )

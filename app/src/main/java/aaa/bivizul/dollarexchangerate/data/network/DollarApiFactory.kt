@@ -5,12 +5,10 @@ import dagger.Provides
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.simplexml.SimpleXmlConverterFactory
 import javax.inject.Singleton
 
 @Module
-@Singleton
 class DollarApiFactory {
 
     @Provides
@@ -36,7 +34,7 @@ class DollarApiFactory {
             .build()
             .create(DollarApiService::class.java)
 
-    companion object{
+    companion object {
         const val BASE_URL = "http://cbr.ru/"
     }
 

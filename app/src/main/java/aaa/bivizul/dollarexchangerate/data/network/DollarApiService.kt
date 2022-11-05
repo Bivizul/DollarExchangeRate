@@ -9,10 +9,10 @@ interface DollarApiService {
 
     @GET("/scripts/XML_dynamic.asp")
     suspend fun getDollarInfoList(
-        @Query(DATE_REQ_1) date1: String = "02/03/2001",
-        @Query(DATE_REQ_2) date2: String = "14/03/2001",
-        @Query(VAL_NM_RQ) id: String = "R01235",
-    ): Response<DollarInfo>
+        @Query(DATE_REQ_1) date1: String,
+        @Query(DATE_REQ_2) date2: String,
+        @Query(VAL_NM_RQ) id: String,
+    ): Response<List<DollarInfo>>
 
     companion object {
         private const val DATE_REQ_1 = "date_req1"

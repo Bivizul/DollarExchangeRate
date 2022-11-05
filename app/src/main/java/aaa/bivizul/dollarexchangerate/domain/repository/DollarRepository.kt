@@ -1,11 +1,18 @@
 package aaa.bivizul.dollarexchangerate.domain.repository
 
+import aaa.bivizul.dollarexchangerate.domain.model.DollarInfo
+import retrofit2.Response
+
 interface DollarRepository {
 
-    fun getDollarInfo()
+    suspend fun getDollarInfo()
 
-    fun getDollarInfoList()
+    suspend fun getDollarInfoList(
+        date1: String,
+        date2: String,
+        id: String
+    ): Response<List<DollarInfo>>
 
-    fun loadData()
+    suspend fun loadData()
 
 }
