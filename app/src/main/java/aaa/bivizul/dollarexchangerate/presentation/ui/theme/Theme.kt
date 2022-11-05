@@ -1,4 +1,4 @@
-package aaa.bivizul.dollarexchangerate.ui.theme
+package aaa.bivizul.dollarexchangerate.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build
